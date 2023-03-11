@@ -33,65 +33,19 @@ estudiantesFiltrados.forEach(function(element) {
     console.log(element.apellido);
 });*/
 
-datosDiv = document.getElementById("datos");
-
-estudiantes.forEach(function(element) {
-    console.log(element.apellido);
-    datosDiv.innerHTML=datosDiv.innerHTML+"<p>"+element.nombre+"</p>";
-});
-
-box = document.getElementById("box"); 
-category = document.getElementById("category"); 
-title = document.getElementById("title");
-id = document.getElementById("id");
-img = document.getElementById("img");
-descripcion = document.getElementById("descripcion");
-precio = document.getElementById("precio");
-rating = document.getElementById("rating");
-
-
-
-
                 fetch("https://fakestoreapi.com/products")
                 .then(response => response.json())
                 .then(json => {
                     console.log(json);
 
                     json.forEach(p => {
-                        category.innerHTML = category.innerHTML+`<p>${p.category}</p>`;
-
-
-                    })
-                });
-
-                fetch("https://fakestoreapi.com/products")
-                .then(response => response.json())
-                .then(json => {
-                    console.log(json);
-
-                    json.forEach(p => {
-                        console.log(p.id)
-
-                        title.innerHTML = title.innerHTML+`<p>${p.title}</p>`;
-
-
-                    })
-                });
-
-                fetch("https://fakestoreapi.com/products")
-                .then(response => response.json())
-                .then(json => {
-                    console.log(json);
-
-                    json.forEach(p => {
-                        console.log(p.id)
-                        category.innerHTML = category.innerHTML+`<p>${p.category}</p>`;
-                        title.innerHTML = title.innerHTML+`<p>${p.title}</p>`;
-                        id.innerHTML = id.innerHTML+`<p>${p.id}</p>`;
-                        img.innerHTML = img.innerHTML+`<p>${p.image}</p>`;
-                        descripcion.innerHTML = descripcion.innerHTML+`<p>${p.description}</p>`;
-                        precio.innerHTML = precio.innerHTML+`<p>${p.price}</p>`;
-                        rating.innerHTML = rating.innerHTML+`<p>${p.rating}</p>`;
-
+                        box.innerHTML = box.innerHTML +
+                        `<div class="category">${p.category}</div>` 
+                        +`<div class="title">${p.title}</div>`
+                        +`<div class="id">${p.id}</div>`
+                        +`<div class="img"><img src="${p.image}" width="100%" height="100%"></div>`
+                        +`<div class="description">${p.description}</div>`
+                        +`<div class="precio">$${p.price}</div>`
+                        +`<div class="rating">Rate: ${p.rating.rate} Count: ${p.rating.count} </div>`;
                     })
                 });

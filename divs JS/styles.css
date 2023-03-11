@@ -39,3 +39,49 @@
 .bloque7{
     background-color: khaki;
 }
+
+.producto{
+    display: flex;
+    justify-content: center
+}
+
+.box{
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.category{
+    font-size:10px;
+}
+
+.title{
+    font-size:20px;
+}
+.id{
+    width: 30px;
+    height: 30px;
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: auto;
+    font-size:20px;
+
+}
+.img{
+
+
+    background-color:black;
+}
+.description{
+    font-size:15px;
+}
+.precio{
+    text-align: right;
+    font-size:20px;
+}
+.rating{
+    font-size:10px;
+}
