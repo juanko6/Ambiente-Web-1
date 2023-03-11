@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.bloque{
+    text-align: center;
+    height: 50px;
+    width: 50px; 
+}
+
+.bloque1{
+    background-color: bisque;
+}
+
+.bloque2{
+    background-color: crimson;
+}
+
+.bloque3{
+    background-color: cornflowerblue;
+}
+
+.bloque4{
+    background-color: chocolate;
+}
+
+.bloque5{
+    background-color: darkgreen;
+}
+
+.bloque6{
+    background-color: chartreuse;
+}
+
+.bloque7{
+    background-color: khaki;
+}
